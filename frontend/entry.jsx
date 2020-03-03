@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store'
+import Root from './components/root'
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
@@ -11,5 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    ReactDOM.render(<h2>react maybe up</h2>, root );
+    ReactDOM.render(<Root store={store} />, root);
 })
