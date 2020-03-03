@@ -1,0 +1,19 @@
+current directory: /Users/jimmy/Desktop/fsp_sweetdrop/vendor/cache/ruby/2.5.0/gems/byebug-11.1.1/ext/byebug
+/Users/jimmy/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200302-37325-4ydlo0.rb extconf.rb
+creating Makefile
+
+current directory: /Users/jimmy/Desktop/fsp_sweetdrop/vendor/cache/ruby/2.5.0/gems/byebug-11.1.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/jimmy/Desktop/fsp_sweetdrop/vendor/cache/ruby/2.5.0/gems/byebug-11.1.1/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/jimmy/Desktop/fsp_sweetdrop/vendor/cache/ruby/2.5.0/gems/byebug-11.1.1/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20200302-37325-ub444z/byebug
