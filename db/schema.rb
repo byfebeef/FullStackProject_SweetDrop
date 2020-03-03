@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_225720) do
+ActiveRecord::Schema.define(version: 2020_03_03_193615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(version: 2020_03_02_225720) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_categories_on_name"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "rating", null: false
+    t.text "body", null: false
+    t.integer "product_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_comments_on_product_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -35,24 +46,15 @@ ActiveRecord::Schema.define(version: 2020_03_02_225720) do
     t.index ["name"], name: "index_products_on_name"
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.integer "rating", null: false
-    t.text "body", null: false
-    t.integer "product_id", null: false
-    t.integer "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_reviews_on_product_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
-  end
-
   create_table "saves", force: :cascade do |t|
     t.string "savable_type", null: false
     t.integer "savable_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_id", null: false
     t.index ["savable_id"], name: "index_saves_on_savable_id"
     t.index ["savable_type"], name: "index_saves_on_savable_type"
+    t.index ["user_id"], name: "index_saves_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
