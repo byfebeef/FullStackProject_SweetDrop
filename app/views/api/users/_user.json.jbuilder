@@ -1,3 +1,1 @@
-json.set! user.id do
-    json.extract! user, :id, :email
-end
+json.extract! user, :id, :email

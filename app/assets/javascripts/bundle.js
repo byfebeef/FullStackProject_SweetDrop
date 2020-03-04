@@ -159,8 +159,8 @@ var signup = function signup(user) {
   return function (dispatch) {
     return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["signup"](user).then(function (user) {
       return dispatch(receiveCurrentUser(user));
-    }, function (err) {
-      return dispatch(receiveErrors(err.responseJSON));
+    }).fail(function (error) {
+      return dispatch(receiveErrors(error.responseJSON));
     });
   };
 };
@@ -168,8 +168,8 @@ var login = function login(user) {
   return function (dispatch) {
     return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["login"](user).then(function (user) {
       return dispatch(receiveCurrentUser(user));
-    }, function (err) {
-      return dispatch(receiveErrors(err.responseJSON));
+    }).fail(function (error) {
+      return dispatch(receiveErrors(error.responseJSON));
     });
   };
 };
@@ -394,7 +394,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mSTP = function mSTP(state) {
   return {
-    errors: state.errors.sessionErrors,
+    errors: state.errors.session,
     formType: 'signup'
   };
 };
@@ -601,8 +601,7 @@ var sessionReducer = function sessionReducer() {
 
   switch (action.type) {
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
-      // return { id: action.currentUser.id };
-      nextState[id] = action.currentUser.id;
+      nextState["id"] = action.currentUser.id;
       return nextState;
 
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["LOGOUT_CURRENT_USER"]:
@@ -712,8 +711,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 var login = function login(user) {
   return $.ajax({
-    method: 'POST',
     url: '/api/session',
+    method: 'POST',
     data: {
       user: user
     }
@@ -721,8 +720,8 @@ var login = function login(user) {
 };
 var signup = function signup(user) {
   return $.ajax({
-    method: 'POST',
     url: '/api/user',
+    method: 'POST',
     data: {
       user: user
     }
@@ -730,8 +729,8 @@ var signup = function signup(user) {
 };
 var logout = function logout() {
   return $.ajax({
-    method: 'DELETE',
-    url: '/api/session'
+    url: '/api/session',
+    method: 'DELETE'
   });
 };
 
