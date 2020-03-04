@@ -1,6 +1,6 @@
 import React from 'react';
-import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container'
+import LoginFormContainer from '../session_form/login_form_container';
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -8,12 +8,30 @@ class NavBar extends React.Component {
     }
 
     render() {
-        return(
-            <div className="navBar"> this is my nav_bar
-                <LoginFormContainer />
-                <SignupFormContainer />
 
-                <p>this is end of NavBar</p>
+        const userInfo = () => {
+            if (this.props.currentUser) {
+                return(
+                <div>
+                    <h2>Hello: {this.props.currentUser.email}</h2>
+                </div>
+                )
+            } else {
+                return(
+                <div>
+                    <SignupFormContainer />
+                    <LoginFormContainer />
+                </div>
+                )
+            }
+        }
+
+        return(
+            <div className="navBar"> == NavBar start
+
+                {userInfo()}
+
+                <p>== end NavBar</p>
             </div>
         )
     }
