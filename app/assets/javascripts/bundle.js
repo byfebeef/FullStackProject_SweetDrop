@@ -258,7 +258,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mSTP = function mSTP(state) {
   return {
-    errors: state.errors.sessionErrors,
+    errors: state.errors.session,
     formType: 'login'
   };
 };
@@ -353,9 +353,10 @@ var sessionForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var displayErrors = this.props.errors ? this.renderErrors() : '';
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, this.props.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, displayErrors), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         onChange: this.update('email'),
         value: this.state.email
@@ -720,7 +721,7 @@ var login = function login(user) {
 };
 var signup = function signup(user) {
   return $.ajax({
-    url: '/api/user',
+    url: '/api/users',
     method: 'POST',
     data: {
       user: user
