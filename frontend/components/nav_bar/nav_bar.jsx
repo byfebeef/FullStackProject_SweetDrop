@@ -14,6 +14,7 @@ class NavBar extends React.Component {
                 return(
                 <div>
                     <h2>Hello: {this.props.currentUser.email}</h2>
+                    <button className="logout-button" onClick={() => this.props.logout()}>Log Out</button>
                 </div>
                 )
 
