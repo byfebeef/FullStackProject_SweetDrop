@@ -16,18 +16,19 @@ class NavBar extends React.Component {
                     <h2>Hello: {this.props.currentUser.email}</h2>
                 </div>
                 )
+
             } else {
                 return(
-                <div>
-                    <SignupFormContainer />
-                    <LoginFormContainer />
-                </div>
+                    <nav className="nav-links">
+                        <button className="signup-button" onClick={() => this.props.openModal('signup')}>Sign Up</button>
+                        <button className="login-button" onClick={() => this.props.openModal('login')}>Sign In</button>
+                    </nav>
                 )
             }
         }
 
         return(
-            <div className="navBar"> == NavBar start
+            <div className="navBar"> NavBar start ==
 
                 {userInfo()}
 
