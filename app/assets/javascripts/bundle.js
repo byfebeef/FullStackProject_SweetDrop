@@ -203,7 +203,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "SweetDrop is up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_bar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_modal__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_bar_container__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -258,13 +258,11 @@ function Modal(_ref) {
     className: "modal-background",
     onClick: closeModal
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal-box"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "modal-child",
     onClick: function onClick(e) {
       return e.stopPropagation();
     }
-  }, component)));
+  }, component));
 }
 
 var mSTP = function mSTP(state) {
@@ -336,32 +334,40 @@ var NavBar = /*#__PURE__*/function (_React$Component) {
 
       var userInfo = function userInfo() {
         if (_this.props.currentUser) {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hello: ", _this.props.currentUser.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-            className: "logout-button",
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "nav-user-profile"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, _this.props.currentUser.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+            className: "logout-button effect-underline",
             onClick: function onClick() {
               return _this.props.logout();
             }
-          }, "Log Out"));
+          }, "LOG OUT"));
         } else {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
             className: "nav-links"
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-            className: "signup-button",
+            className: "signup-button effect-underline",
             onClick: function onClick() {
               return _this.props.openModal('signup');
             }
-          }, "Sign Up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-            className: "login-button",
+          }, "SIGN UP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+            className: "login-button effect-underline",
             onClick: function onClick() {
               return _this.props.openModal('login');
             }
-          }, "Sign In"));
+          }, "LOG IN"));
         }
       };
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "navBar"
-      }, " NavBar start ==", userInfo(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "== end NavBar"));
+        className: "nav-wrap"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav-bar"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav-logo"
+      }, "SweeetDrop_Logo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "nav-userinfo"
+      }, userInfo())));
     }
   }]);
 
@@ -572,10 +578,11 @@ var sessionForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var formHeader = this.props.formType == "login" ? "Log In To SweetDrop" : "Sign Up For SweetDrop!";
       var displayErrors = this.props.errors ? this.renderErrors() : '';
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-child"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, this.props.formType), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, formHeader), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, displayErrors), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
@@ -653,15 +660,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.js");
 /* harmony import */ var _components_root__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/root */ "./frontend/components/root.jsx");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  var root = document.getElementById('root');
-  var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  var store;
+
+  if (window.currentUser) {
+    var preloadedState = {
+      session: {
+        id: window.currentUser.id
+      },
+      entities: {
+        users: _defineProperty({}, window.currentUser.id, window.currentUser)
+      }
+    };
+    store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  }
+
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  var root = document.getElementById('root');
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
     store: store
   }), root);

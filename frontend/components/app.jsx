@@ -14,7 +14,6 @@ import Modal from './nav_bar/modal'
 const App = () => (
     <div>
         <Modal />
-        <h1>SweetDrop is up</h1>
         <NavBarContainer />
 
 

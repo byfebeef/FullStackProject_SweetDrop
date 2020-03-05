@@ -12,28 +12,35 @@ class NavBar extends React.Component {
         const userInfo = () => {
             if (this.props.currentUser) {
                 return(
-                <div>
-                    <h2>Hello: {this.props.currentUser.email}</h2>
-                    <button className="logout-button" onClick={() => this.props.logout()}>Log Out</button>
+                <div className='nav-user-profile'>
+                    <p>{this.props.currentUser.email}</p>
+                        <button className="logout-button effect-underline" onClick={() => this.props.logout()}>LOG OUT</button>
                 </div>
                 )
 
             } else {
                 return(
                     <nav className="nav-links">
-                        <button className="signup-button" onClick={() => this.props.openModal('signup')}>Sign Up</button>
-                        <button className="login-button" onClick={() => this.props.openModal('login')}>Sign In</button>
+                        <button className="signup-button effect-underline" onClick={() => this.props.openModal('signup')}>SIGN UP</button>
+                        <button className="login-button effect-underline" onClick={() => this.props.openModal('login')}>LOG IN</button>
                     </nav>
                 )
             }
         }
 
         return(
-            <div className="navBar"> NavBar start ==
+            <div className="nav-wrap">
 
-                {userInfo()}
+                <div className="nav-bar">
+                    <div className="nav-logo">SweeetDrop_Logo</div>
 
-                <p>== end NavBar</p>
+                    <div className="nav-userinfo">
+                        {userInfo()}
+                    </div>
+
+
+                </div>
+
             </div>
         )
     }

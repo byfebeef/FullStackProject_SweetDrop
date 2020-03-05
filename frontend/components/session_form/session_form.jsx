@@ -37,10 +37,13 @@ class sessionForm extends React.Component {
     }
 
     render() {
+        const formHeader = (this.props.formType == "login") ? 
+                "Log In To SweetDrop" : "Sign Up For SweetDrop!" ;
+
         const displayErrors = (this.props.errors) ? this.renderErrors() : ''
         return(
             <div className="modal-child">
-                <h2>{this.props.formType}</h2>
+                <h3>{formHeader}</h3>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         {displayErrors}

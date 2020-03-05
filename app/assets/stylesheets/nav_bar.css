@@ -1,0 +1,35 @@
+.nav-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 69px;
+    opacity: 0.5;
+    background-color: #ffffff;
+    transition: opacity 0.25s;
+    border-bottom: 1px solid grey;
+}
+
+.nav-bar:hover {
+    opacity: 1;
+}
+
+.nav-user-profile {
+    font-size: 21px;
+    border: 0;
+}
+
+
+
+
+
+
+
+
+
+
