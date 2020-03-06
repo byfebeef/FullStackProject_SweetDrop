@@ -36,7 +36,7 @@ I need the effect and applied via class */
     padding: 0 0 7px 0;
     margin: 0 25px 0 25px;
     position: relative;
-    background-color: rgb(255, 255, 255, 0.0);
+    background-color: #ffffff00;
  }
 
  .effect-underline:before {

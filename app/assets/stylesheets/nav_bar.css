@@ -14,15 +14,15 @@
     width: 100%;
     align-items: center;
     height: 69px;
-    background-color: rgb(255, 255, 255, 0.4);
-    border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid #f0f0f045;
     transition: ease-in-out 0.3s;
 }
 
 .nav-bar:hover {
 
-    background-color: rgb(255, 255, 255, 1);
-    border-bottom: 1px solid rgb(240, 240, 240);
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(240, 240, 240);
     
 }
 
@@ -36,7 +36,7 @@
 }
 
 .signup-button {
-    background-color: rgb(255, 255, 255, 0.0);
+    background-color: rgba(255, 255, 255, 0.0);
 }
 
 
