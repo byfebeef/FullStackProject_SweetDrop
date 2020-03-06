@@ -22,6 +22,11 @@
     background-color: rgb(235, 244, 189);
  }
 
+/* css animation link underline logic from: 
+ https://paulund.co.uk/css-animation-link-underline */
+
+/* .effect-underline class is applied to links where 
+I need the effect and applied via class */
 
  .effect-underline {
     outline: 0;
