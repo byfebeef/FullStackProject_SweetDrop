@@ -2,25 +2,28 @@
     display: flex;
     /* justify-content: space-between; */
     width: 100%;
+    position: absolute;
 
 }
 
+
 .nav-bar {
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
     height: 69px;
-    opacity: 0.5;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ffffff;
-    transition: opacity, border-bottom 0.25s;
+    background-color: rgb(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+    transition: ease-in-out 0.3s;
 }
 
 .nav-bar:hover {
-    opacity: 1;
-    border-bottom: 1px solid grey;
+
+    background-color: rgb(255, 255, 255, 1);
+    border-bottom: 1px solid rgb(240, 240, 240);
+    
 }
 
 .nav-user-profile {
@@ -28,13 +31,13 @@
     border: 0;
 }
 
-
-
 .nav-logo {
     padding: 0 27px 0 27px;
 }
 
-
+.signup-button {
+    background-color: rgb(255, 255, 255, 0.0);
+}
 
 
 

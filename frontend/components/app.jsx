@@ -10,10 +10,12 @@ import {
 
 import NavBarContainer from './nav_bar/nav_bar_container'
 import Modal from './nav_bar/modal'
+import Splash from './splash/splash_container'
 
 const App = () => (
     <div>
         <Modal />
+        <Splash />
         <NavBarContainer />
 
 

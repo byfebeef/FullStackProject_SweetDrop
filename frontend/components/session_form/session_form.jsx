@@ -36,20 +36,34 @@ class sessionForm extends React.Component {
         );
     }
 
+
+
     render() {
-        const formHeader = (this.props.formType == 'login') ? 
+        const formHeader = (this.props.formType === 'login') ? 
                 'Log In To SweetDrop' : 'Sign Up For SweetDrop!' ;
         const subButton = (this.props.formType === 'login') ? 
                 'LOG IN' : 'CONTINUE'
+        const footerText = (this.props.formType === 'login') ? 
+        <div className="form-footer-text">
+            Not a member yet? 
+            <input className="form-footer-link" type="submit" value="Sign Up" onClick={() => this.props.otherForm()} />
+        </div> :
+        <div className="form-footer-text">
+            Already a member? 
+            <input className="form-footer-link" type="submit" value="Log In" onClick={() => this.props.otherForm()} />
+        </div>
 
         const displayErrors = (this.props.errors) ? this.renderErrors() : ''
         return(
             <div className="session-form">
-                <h3 className="session-header">{formHeader}</h3>
+                <div className="session-header-container">
+                    <h3 className="session-header">{formHeader}</h3>
+                </div>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         {displayErrors}
                     </div>
+                    <div className="form-body-container">
                         <div className="form-label-container">
                             <label className="form-input-label">Email</label>
                         </div>
@@ -66,6 +80,10 @@ class sessionForm extends React.Component {
                     </div>
 
                     <button className="form-button" type="submit">{subButton}</button>    
+                    <div className="form-footer-container">
+                        {footerText}
+                    </div>
+                    </div>
                 </form>
             </div>
         )

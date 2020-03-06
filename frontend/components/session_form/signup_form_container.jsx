@@ -12,6 +12,7 @@ const mSTP = (state) => ({
 
 const mDTP = dispatch => ({
     processForm: (user) => dispatch(signup(user)),
+    otherForm: () => dispatch(openModal('login')),
     closeModal: () => dispatch(closeModal())
 })
 

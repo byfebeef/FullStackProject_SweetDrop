@@ -19,6 +19,7 @@
     font-family: 'Spartan', Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
+    background-color: rgb(235, 244, 189);
  }
 
 /* css animation link underline logic from: 
@@ -28,13 +29,14 @@
 I need the effect and applied via class */
 
  .effect-underline {
+    outline: 0;
     font-size: 21px;
     cursor: pointer;
     border: 0;
     padding: 0 0 7px 0;
     margin: 0 25px 0 25px;
     position: relative;
-    border-bottom:  4px solid #ffffff;
+    background-color: rgb(255, 255, 255, 0.0);
  }
 
  .effect-underline:before {
@@ -46,7 +48,7 @@ I need the effect and applied via class */
     left: 0;
     background-color: #fdcf41;;
     visibility: hidden;
-    transition: 0.3s ease-in-out 0s;
+    transition: ease-in-out 0.25s;
  }
  .effect-underline:hover:before {
     visibility: visible;
