@@ -11,13 +11,12 @@
 
 
 
-.modal-child {
+.modal-container {
   position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    height: 600px;
-    background-color: rgb(196, 231, 243);
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 25px 60px 26px 60px;
 
 }

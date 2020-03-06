@@ -15,8 +15,9 @@
  */
 
  body {
-     color: #222222;
-     font-family: 'Spartan', Arial, Helvetica, sans-serif;
+    color: #222222;
+    font-family: 'Spartan', Arial, Helvetica, sans-serif;
+
  }
 
 /* css animation link underline logic from: 
@@ -29,8 +30,8 @@ I need the effect and applied via class */
     font-size: 21px;
     cursor: pointer;
     border: 0;
-    padding: 5px 0 5px 0;
-    margin: 0 5px 0 5px;
+    padding: 0 0 7px 0;
+    margin: 0 25px 0 25px;
     position: relative;
     border-bottom:  4px solid #ffffff;
  }
@@ -50,3 +51,4 @@ I need the effect and applied via class */
     visibility: visible;
     width: 100%
 }
+

@@ -37,24 +37,35 @@ class sessionForm extends React.Component {
     }
 
     render() {
-        const formHeader = (this.props.formType == "login") ? 
-                "Log In To SweetDrop" : "Sign Up For SweetDrop!" ;
+        const formHeader = (this.props.formType == 'login') ? 
+                'Log In To SweetDrop' : 'Sign Up For SweetDrop!' ;
+        const subButton = (this.props.formType === 'login') ? 
+                'LOG IN' : 'CONTINUE'
 
         const displayErrors = (this.props.errors) ? this.renderErrors() : ''
         return(
-            <div className="modal-child">
-                <h3>{formHeader}</h3>
+            <div className="session-form">
+                <h3 className="session-header">{formHeader}</h3>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         {displayErrors}
                     </div>
-                    <label>Email:
-                        <input type="text" onChange={this.update('email')} value={this.state.email} />
-                    </label>
-                    <label>Password:
-                        <input type="password" onChange={this.update('password')} value={this.state.password} />
-                    </label>
-                    <button type="submit">{this.props.formType}</button>    
+                        <div className="form-label-container">
+                            <label className="form-input-label">Email</label>
+                        </div>
+                        <div className="form-input-container">
+                            <input className="form-input-field" placeholder="Email" type="text" onChange={this.update('email')} value={this.state.email} />
+
+                        </div>
+
+                    <div className="form-label-container">
+                        <label className="form-input-label">Password</label>  
+                    </div>
+                    <div className="form-input-container">
+                        <input className="form-input-field" type="password" placeholder="Password" onChange={this.update('password')} value={this.state.password} />
+                    </div>
+
+                    <button className="form-button" type="submit">{subButton}</button>    
                 </form>
             </div>
         )

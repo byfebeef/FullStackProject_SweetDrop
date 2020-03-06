@@ -258,7 +258,7 @@ function Modal(_ref) {
     className: "modal-background",
     onClick: closeModal
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "modal-child",
+    className: "modal-container",
     onClick: function onClick(e) {
       return e.stopPropagation();
     }
@@ -578,23 +578,43 @@ var sessionForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var formHeader = this.props.formType == "login" ? "Log In To SweetDrop" : "Sign Up For SweetDrop!";
+      var formHeader = this.props.formType == 'login' ? 'Log In To SweetDrop' : 'Sign Up For SweetDrop!';
+      var subButton = this.props.formType === 'login' ? 'LOG IN' : 'CONTINUE';
       var displayErrors = this.props.errors ? this.renderErrors() : '';
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-child"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, formHeader), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "session-form"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "session-header"
+      }, formHeader), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, displayErrors), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, displayErrors), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-label-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "form-input-label"
+      }, "Email")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-input-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "form-input-field",
+        placeholder: "Email",
         type: "text",
         onChange: this.update('email'),
         value: this.state.email
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Password:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-label-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "form-input-label"
+      }, "Password")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-input-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "form-input-field",
         type: "password",
+        placeholder: "Password",
         onChange: this.update('password'),
         value: this.state.password
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "form-button",
         type: "submit"
-      }, this.props.formType)));
+      }, subButton)));
     }
   }]);
 
