@@ -1,6 +1,9 @@
 import React from 'react';
-import SignupFormContainer from '../session_form/signup_form_container'
-import LoginFormContainer from '../session_form/login_form_container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+
+import DropDownContainer from './drop_down_container'
+
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -13,8 +16,8 @@ class NavBar extends React.Component {
             if (this.props.currentUser) {
                 return(
                 <div className='nav-user-profile'>
-                    <p>{this.props.currentUser.email}</p>
-                        <button className="logout-button effect-underline" onClick={() => this.props.logout()}>LOG OUT</button>
+                        <FontAwesomeIcon className="icon-user" icon={faUser} />
+                        <DropDownContainer />
                 </div>
                 )
 

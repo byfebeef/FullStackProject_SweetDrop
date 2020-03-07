@@ -1,11 +1,15 @@
 class ApplicationController < ActionController::Base
 
-      skip_before_action :verify_authenticity_token
-
     helper_method :current_user, :logged_in?
 
     def current_user
         @current_user ||= User.find_by(session_token: session[:session_token])
+    end
+
+    def require_login
+        if !logged_in? 
+            render json: ["Nobody signed in"], status: 404
+        end
     end
 
     def logged_in?

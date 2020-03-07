@@ -1,6 +1,6 @@
 .nav-wrap {
     display: flex;
-    /* justify-content: space-between; */
+
     width: 100%;
     position: absolute;
 
@@ -8,14 +8,14 @@
 
 
 .nav-bar {
-    /* position: absolute; */
+
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
     height: 69px;
     background-color: rgba(255, 255, 255, 0.4);
-    border-bottom: 1px solid #f0f0f045;
+    border-bottom: 1px rgba(255, 255, 255, 0.4);
     transition: ease-in-out 0.3s;
 }
 
@@ -35,11 +35,15 @@
     padding: 0 27px 0 27px;
 }
 
+
 .signup-button {
     background-color: rgba(255, 255, 255, 0.0);
 }
 
-
+.icon-user {
+    font-size: 40px;
+    cursor: pointer;
+}
 
 
 

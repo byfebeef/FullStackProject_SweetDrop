@@ -11,12 +11,53 @@
 }
 
 .session-header {
-    margin: 0;
+    margin: 0 auto;
+}
+
+.icon-faTimes {
+    font-size: 32px;
+    position: absolute;
+    right: 30px;
+    width: 100%;
+    cursor: pointer;
 }
 
 .form-body-container {
     padding: 20px 55px 20px 55px;
 }
+.form-guest-container {
+    width: 100%;
+    border: 1px solid #222222;   
+    margin: 0 0 24px 0;
+}
+
+
+.form-guest-text {
+    display: flex;
+    margin: 0 auto;
+    height: 48px;
+    font-size: 16px;
+    border: 0;
+}
+.form-guest-text:hover {
+    background-color: #f0f0f0;
+}
+
+.or-container {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #9f9e9e;
+    line-height: 0px;
+    margin: 10px 0 20px;
+}
+.or-container span {
+    background-color: #ffffff;
+    color: #9f9e9e;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+
 
 .form-input-label {
     color: #9f9e9e;
@@ -69,4 +110,32 @@
 .form-footer-text {
     font-size: 16px;
     color: #9f9e9e;
+}
+
+.form-footer-link {
+    border: 0;
+    outline: 0;
+
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.form-error {
+    font-size: 14px;
+    color: #e3352c;
+    margin: 6px 0 0 1px;
+}
+
+.form-footer-text {
+    font-size: 16px;
+}
+
+.form-error-link {
+    border: 0;
+    outline: 0;
+    color: #e3352c;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
 }
