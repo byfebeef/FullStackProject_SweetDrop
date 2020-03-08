@@ -55,3 +55,28 @@ I need the effect and applied via class */
     width: 100%
 }
 
+ .effect-underline-drop {
+    outline: 0;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0;
+    padding: 0 0 7px 0;
+    position: relative;
+    background-color: #ffffff00;
+ }
+
+ .effect-underline-drop:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: #fdcf41;;
+    visibility: hidden;
+    transition: ease-in-out 0.25s;
+ }
+ .effect-underline-drop:hover:before {
+    visibility: visible;
+    width: 100%
+}

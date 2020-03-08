@@ -15,10 +15,15 @@ class NavBar extends React.Component {
         const userInfo = () => {
             if (this.props.currentUser) {
                 return(
-                <div className='nav-user-profile'>
-                        <FontAwesomeIcon className="icon-user" icon={faUser} />
-                        <DropDownContainer />
-                </div>
+                    <div className="nav-user-container">
+                        <div className='nav-user-profile'>
+                                <FontAwesomeIcon className="icon-user" icon={faUser} />
+                                <div className="drop-down-button-container">
+                                    <DropDownContainer />
+                                </div>
+                        </div>
+
+                    </div>
                 )
 
             } else {

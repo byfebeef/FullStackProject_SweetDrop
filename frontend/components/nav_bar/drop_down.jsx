@@ -8,10 +8,16 @@ class DropDown extends React.Component {
 
     render() {
         return(
-            <div className="drop-down">
+            <div className="drop-down-container">
                 <div>
-                    <button className="profile-button effect-underline" onClick={() => this.props.logout()}>Profile</button>
-                    <button className="logout-button effect-underline" onClick={() => this.props.logout()}>LOG OUT</button>
+                    <div className="drop-down-text-container">
+                        <button className="profile-button effect-underline-drop">Profile</button>
+                    </div>
+                    <div className="drop-down-text-container">
+                        <button className="saved-button effect-underline-drop">Saved</button>                    </div>
+                    <div className="drop-down-text-container">
+                        <button className="logout-button effect-underline-drop" onClick={() => this.props.logout()}>Log Out</button>
+                    </div>
                 </div>
 
             </div>

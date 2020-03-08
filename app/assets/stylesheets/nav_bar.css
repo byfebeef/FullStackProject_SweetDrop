@@ -43,8 +43,25 @@
 .icon-user {
     font-size: 40px;
     cursor: pointer;
+    
 }
 
 
+.nav-user-profile {
+    padding: 20px;
+    position: relative;
+    display: inline-block;
+
+}
+
+.nav-user-profile:hover .drop-down-container {
+    display: block;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid #f0f0f0;
+
+    
+    right: 0px;
+    top: 75px;
+}
 
 

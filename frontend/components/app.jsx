@@ -14,7 +14,6 @@ import Modal from './nav_bar/modal'
 import Splash from './splash/splash_container'
 
 
-
 const App = () => (
     <div>
         <Modal />

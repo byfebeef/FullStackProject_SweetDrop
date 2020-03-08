@@ -258,18 +258,23 @@ var DropDown = /*#__PURE__*/function (_React$Component) {
       var _this = this;
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "drop-down"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "profile-button effect-underline",
+        className: "drop-down-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "drop-down-text-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "profile-button effect-underline-drop"
+      }, "Profile")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "drop-down-text-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "saved-button effect-underline-drop"
+      }, "Saved"), "                    "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "drop-down-text-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "logout-button effect-underline-drop",
         onClick: function onClick() {
           return _this.props.logout();
         }
-      }, "Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "logout-button effect-underline",
-        onClick: function onClick() {
-          return _this.props.logout();
-        }
-      }, "LOG OUT")));
+      }, "Log Out"))));
     }
   }]);
 
@@ -442,11 +447,15 @@ var NavBar = /*#__PURE__*/function (_React$Component) {
       var userInfo = function userInfo() {
         if (_this.props.currentUser) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "nav-user-container"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "nav-user-profile"
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__["FontAwesomeIcon"], {
             className: "icon-user",
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faUser"]
-          }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_drop_down_container__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+          }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "drop-down-button-container"
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_drop_down_container__WEBPACK_IMPORTED_MODULE_3__["default"], null))));
         } else {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
             className: "nav-links"
