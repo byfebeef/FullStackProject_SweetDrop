@@ -37,9 +37,10 @@
     margin: 0 auto;
     height: 48px;
     font-size: 16px;
+    background-color: rgba(0, 0, 0, 0);
     border: 0;
 }
-.form-guest-text:hover {
+.form-guest-container:hover {
     background-color: #f0f0f0;
 }
 
