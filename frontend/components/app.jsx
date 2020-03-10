@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import {
     Route,
     Redirect,
@@ -11,13 +10,14 @@ import {
 
 import NavBarContainer from './nav_bar/nav_bar_container'
 import Modal from './nav_bar/modal'
-import Splash from './splash/splash_container'
+import SplashContainer from './splash/splash_container'
 
 
 const App = () => (
-    <div>
+    <div className="div-app">
         <Modal />
-        <Splash />
+        
+        <SplashContainer />
         <NavBarContainer />
 
 

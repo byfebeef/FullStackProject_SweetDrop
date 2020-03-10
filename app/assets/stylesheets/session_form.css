@@ -33,6 +33,7 @@
 
 
 .form-guest-text {
+    outline: 0;
     display: flex;
     margin: 0 auto;
     height: 48px;

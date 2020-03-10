@@ -3,7 +3,7 @@ import React from 'react';
 import Splash from './splash';
 
 const mSTP = state => ({
-
+    currentUser: state.entities.users[state.session.id]
 })
 
 

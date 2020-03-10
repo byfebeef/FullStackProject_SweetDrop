@@ -8,7 +8,8 @@ class Splash extends React.Component {
     render(){
         return(
             <div className="splash-container">
-                <h2>this is my Splash</h2>
+                <div className="splash-left"></div>
+                <div className="splash-right"></div>
             </div>
         )
     }

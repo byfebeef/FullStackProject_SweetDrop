@@ -11,12 +11,12 @@ class DropDown extends React.Component {
             <div className="drop-down-container">
                 <div>
                     <div className="drop-down-text-container">
-                        <button className="profile-button effect-underline-drop">Profile</button>
+                        <button className="profile-button effect-underline">Profile</button>
                     </div>
                     <div className="drop-down-text-container">
-                        <button className="saved-button effect-underline-drop">Saved</button>                    </div>
+                        <button className="saved-button effect-underline">Saved</button>                    </div>
                     <div className="drop-down-text-container">
-                        <button className="logout-button effect-underline-drop" onClick={() => this.props.logout()}>Log Out</button>
+                        <button className="logout-button effect-underline" onClick={() => this.props.logout()}>Log Out</button>
                     </div>
                 </div>
 
