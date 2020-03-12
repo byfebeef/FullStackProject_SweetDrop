@@ -8,6 +8,7 @@
 
 
 User.destroy_all
+Category.destroy_all
 Product.destroy_all
 
 u1 = User.create({email: 'Guest_User@guest.com', password: 'password'})

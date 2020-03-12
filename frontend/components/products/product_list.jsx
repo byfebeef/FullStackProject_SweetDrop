@@ -1,26 +1,24 @@
 import React from 'react';
+import ProductListItem from './product_list_item'
 
 class ProductList extends React.Component {
     constructor(props) {
         super(props)
     }
 
+    componentDidMount() {
+        this.props.fetchProducts();
+    }
+
     render() {
+
+        const listItems = this.props.products.map( product => <ProductListItem key={product.id} product={product} />)
+
         return (
-            <div>this is product listings
-                <ul>
-                    <li>this is product listings</li>
-                    <li>this is product listings</li>
-                    <li>this is product listings</li>
-                    <li>this is product listings</li>
-                    <li>this is product listings</li>
-                    <li>this is product listings</li>
-                    <li>this is product listings</li>
-                    <li>this is product listings</li>
-                    <li>this is product listings</li>
-                    <li>this is product listings</li>
-                    <li>this is product listings</li>
-                </ul>
+            <div className="product-listing-container">
+                <div>
+                    {listItems}
+                </div>
             </div>
         )
     }
