@@ -10,6 +10,8 @@ class NavBar extends React.Component {
         super(props)
     }
 
+
+
     render() {
 
         const userInfo = () => {
@@ -36,6 +38,8 @@ class NavBar extends React.Component {
                 )
             }
         }
+
+  
 
         return(
             <div className="nav-wrap">
