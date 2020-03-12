@@ -1,9 +1,9 @@
 .nav-wrap {
     display: flex;
-
+    position: fixed;
+    top: 0;
     width: 100%;
-    position: absolute;
-
+    z-index: 1;
 }
 
 

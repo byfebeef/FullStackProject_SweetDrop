@@ -10,6 +10,7 @@ class Splash extends React.Component {
             <div className="splash-container">
                 <div className="splash-left"></div>
                 <div className="splash-right"></div>
+
             </div>
         )
     }
