@@ -1,4 +1,5 @@
-## SweetDrop
+## SweetDrop    
+![logo](https://github.com/byfebeef/FullStackProject_SweetDrop/blob/master/public/icon.png)
 
 This is a clone of Drop(formerly known as Massdrop)
 
