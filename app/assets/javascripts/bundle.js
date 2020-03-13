@@ -552,7 +552,11 @@ var NavBar = /*#__PURE__*/function (_React$Component) {
         className: "nav-bar"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/"
-      }, "SweetDrop_Logo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "nav-logo",
+        src: "./icon.png",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "nav-userinfo"
       }, userInfo())));
     }
@@ -660,8 +664,10 @@ var ProductList = /*#__PURE__*/function (_React$Component) {
         });
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-listing-wrap"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "product-listing-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, listItems));
+      }, listItems));
     }
   }]);
 
@@ -721,12 +727,15 @@ var ProductListItem = /*#__PURE__*/function (_React$Component) {
         className: "product-item-wrap"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "product-item-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "assets/default_pic.png",
-        alt: ""
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/products/".concat(this.props.product.id)
-      }, this.props.product.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "price: ", this.props.product.price)));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "product-item-image",
+        src: "./default_pic.png",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/products/".concat(this.props.product.id)
+      }, this.props.product.name), "price: ", this.props.product.price));
     }
   }]);
 

@@ -45,8 +45,7 @@ class NavBar extends React.Component {
             <div className="nav-wrap">
 
                 <div className="nav-bar">
-                    {/* <Link to="/"><img className="nav-logo" src="assets/icon.png" /></Link> */}
-                    <Link to="/">SweetDrop_Logo</Link>
+                    <Link to="/"><img className="nav-logo" src="./icon.png" alt=""/></Link>
 
                     <div className="nav-userinfo">
                         {userInfo()}
