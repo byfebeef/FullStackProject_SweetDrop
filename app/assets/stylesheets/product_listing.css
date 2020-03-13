@@ -5,3 +5,14 @@
 .product-show-container {
     margin-top: 70px;
 }
+
+.product-item-wrap {
+    display: flex;
+}
+
+.product-item-container {
+    margin: 30px;
+    width: 330px;
+    height: 500px;
+    background-color: #9f9e9e;
+}

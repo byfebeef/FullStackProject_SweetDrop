@@ -1,24 +1,17 @@
-# README
+## SweetDrop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a clone of Drop(formerly known as Massdrop)
 
-Things you may want to cover:
+[Live Link](https://sweet-drop.herokuapp.com/#/)
 
-* Ruby version
+### Features: 
 
-* System dependencies
+* Secure user authentication from backend to fronend via BCrypt
 
-* Configuration
+### Technologies:
 
-* Database creation
+The project's backend was built with Ruby-2.5.1 and Postgre SQL database. The frontend utilized React and Redux. CSS took large amount of the worktime to implement modal features and various effects.
 
-* Database initialization
+### Future Implementation:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Flesh out the product feature and rest of the MVP 

@@ -498,7 +498,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- // import Icon from '../../../app/';
+
 
 var NavBar = /*#__PURE__*/function (_React$Component) {
   _inherits(NavBar, _React$Component);
@@ -717,9 +717,16 @@ var ProductListItem = /*#__PURE__*/function (_React$Component) {
   _createClass(ProductListItem, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-item-wrap"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-item-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "assets/default_pic.png",
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/products/".concat(this.props.product.id)
-      }, this.props.product.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "price: ", this.props.product.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "description: ", this.props.product.description)));
+      }, this.props.product.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "price: ", this.props.product.price)));
     }
   }]);
 

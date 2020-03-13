@@ -8,14 +8,13 @@ class ProductListItem extends React.Component {
 
     render() {
         return(
-            <div>
-                <ul>
-                    
+            <div className="product-item-wrap">
+                <div className="product-item-container">
+                    <img src="assets/default_pic.png" alt=""/>
                     <li><Link to={`/products/${this.props.product.id}`}>{this.props.product.name}</Link></li>
                     <li>price: {this.props.product.price}</li>
-                    <li>description: {this.props.product.description}</li>
 
-                </ul>
+                </div>
             </div>
         )
     }

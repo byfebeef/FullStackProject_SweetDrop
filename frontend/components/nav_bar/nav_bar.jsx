@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import DropDownContainer from './drop_down_container';
-// import Icon from '../../../app/';
 
 
 class NavBar extends React.Component {
