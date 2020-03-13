@@ -1,8 +1,9 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
-import DropDownContainer from './drop_down_container'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import DropDownContainer from './drop_down_container';
+// import Icon from '../../../app/';
 
 
 class NavBar extends React.Component {
@@ -45,7 +46,7 @@ class NavBar extends React.Component {
             <div className="nav-wrap">
 
                 <div className="nav-bar">
-                    <Link className="nav-logo" to="/">SweeetDrop_Logo</Link>
+                    <Link to="/"><img className="nav-logo" src="assets/icon.png" /></Link>
 
                     <div className="nav-userinfo">
                         {userInfo()}

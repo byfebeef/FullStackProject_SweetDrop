@@ -11,6 +11,8 @@
 }
 
 .splash-right {
+    opacity: 0.5;
+    background-color: pink;
     width: calc(100% - 300px);
-    background-image: url(https://previews.123rf.com/images/puhhha/puhhha1806/puhhha180600493/102565049-rainbow-candy-colorful-sweets-and-candies-on-background-high-resolution.jpg);
+    background-image: url(default_pic.png);
 }
