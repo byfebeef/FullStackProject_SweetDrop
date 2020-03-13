@@ -552,10 +552,7 @@ var NavBar = /*#__PURE__*/function (_React$Component) {
         className: "nav-bar"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "nav-logo",
-        src: "assets/icon.png"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "SweetDrop_Logo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "nav-userinfo"
       }, userInfo())));
     }
