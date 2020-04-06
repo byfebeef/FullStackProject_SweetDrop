@@ -666,6 +666,10 @@ var ProductList = /*#__PURE__*/function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "product-listing-wrap"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-listing-menu-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-listing-menu-title"
+      }, "Product Menu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Chocolate"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Candy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "product-listing-container"
       }, listItems));
     }
@@ -735,7 +739,7 @@ var ProductListItem = /*#__PURE__*/function (_React$Component) {
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/products/".concat(this.props.product.id)
-      }, this.props.product.name), "price: ", this.props.product.price));
+      }, this.props.product.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "price: $", this.props.product.price)));
     }
   }]);
 

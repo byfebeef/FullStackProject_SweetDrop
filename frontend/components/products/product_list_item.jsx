@@ -12,7 +12,7 @@ class ProductListItem extends React.Component {
                 <div className="product-item-container">
                     <Link to={`/products/${this.props.product.id}`}><img className="product-item-image" src="./default_pic.png" alt="" /></Link>
                     <Link to={`/products/${this.props.product.id}`}>{this.props.product.name}</Link>
-                    price: {this.props.product.price}
+                    <div>price: ${this.props.product.price}</div>
 
                 </div>
             </div>

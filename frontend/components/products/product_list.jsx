@@ -16,6 +16,11 @@ class ProductList extends React.Component {
 
         return (
             <div className="product-listing-wrap">
+                <div className="product-listing-menu-container">
+                    <div className="product-listing-menu-title">Product Menu</div>
+                    <div>Chocolate</div>
+                    <div>Candy</div>
+                </div>
                 <div className="product-listing-container">
                     {listItems}
                 </div>
