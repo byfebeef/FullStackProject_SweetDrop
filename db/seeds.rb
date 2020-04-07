@@ -21,4 +21,5 @@ p1 = Product.create({name: 'rum raison chocolate', price: 19, description: 'alco
 p2 = Product.create({name: 'chocolate truffle', price: 19, description: 'chocolate covered in more chocolate', category_id: c1.id, expired: false})
 p3 = Product.create({name: 'fruit lollipops', price: 19, description: 'high quality fructose', category_id: c2.id, expired: false})
 p4 = Product.create({name: 'coffee taffy', price: 19, description: 'sweeter morning fix', category_id: c2.id, expired: false})
+p4 = Product.create({name: 'mint taffy', price: 19, description: 'minty', category_id: c2.id, expired: false})
 
