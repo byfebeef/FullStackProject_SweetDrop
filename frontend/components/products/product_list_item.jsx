@@ -7,7 +7,7 @@ class ProductListItem extends React.Component {
     }
 
     render() {
-        
+         
         return(
             <div className="product-item-wrap">
                 <div className="product-item-container">
