@@ -40,7 +40,6 @@ class NavBar extends React.Component {
         }
 
   
-
         return(
             <div className="nav-wrap">
 
