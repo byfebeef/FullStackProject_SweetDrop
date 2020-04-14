@@ -7,6 +7,7 @@ const mSTP = state => ({
     modal: state.ui.modal
 })
 
+
 const mDTP = dispatch => ({
     openModal: modal => dispatch(openModal(modal)),
     closeModal: () => dispatch(closeModal()),
